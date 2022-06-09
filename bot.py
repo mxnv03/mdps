@@ -8,6 +8,7 @@ with open('pythonProject/bot_token.txt') as file:
 vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)
 
+users_now = []
 
 def send_msg(user_id, message):
     vk.method('messages.send', {'user_id': user_id, 'message': message, 'random_id': get_random_id()})
